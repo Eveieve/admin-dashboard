@@ -86,7 +86,6 @@ img[src$="svg"] {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  /* gap: 1rem; */
   grid-template-areas: repeat(6, 1fr);
 }
 .main {
@@ -98,20 +97,62 @@ main .card {
   border-radius: 1rem;
   padding: 2rem;
 }
-.header,
-.sec-header {
+.header {
   background-color: var(--header);
   grid-column: 2/4;
   grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
-
+.header,
+.sec-header {
+  padding: 1rem;
+}
+.header .search {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.search input {
+  display: flex;
+  flex: 1;
+  border-radius: 1rem;
+  border: none;
+}
+.sec-header img {
+  width: 3rem;
+  height: 3rem;
+  /* padding-right: 1rem; */
+}
+.header .login {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sec-header {
+  background-color: var(--header);
+  grid-column: 2/4;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.sec-header .one {
+  display: flex;
+  gap: 1rem;
+}
+.sec-header .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
 main {
   background-color: var(--article);
   grid-column: 2/3;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-row: 2/6;
+  grid-row: 3/6;
   padding: 2rem;
 }
 .card .svg {
@@ -129,7 +170,7 @@ main {
   display: grid;
   gap: 1rem;
   grid-column: 3/4;
-  grid-row: 2/5;
+  grid-row: 3/5;
 }
 
 div.announcement {
