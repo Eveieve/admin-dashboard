@@ -85,8 +85,8 @@ img[src$="svg"] {
 }
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  /* gap: 2rem; */
+  /* grid-template-columns: 1fr 4fr; */
+
   gap: 1rem;
 }
 .main {
@@ -96,15 +96,17 @@ img[src$="svg"] {
 .header,
 .sec-header {
   background-color: var(--header);
-  grid-column: 2/3;
+  /* grid-column: 2/3; */
 }
 
 main {
   background-color: var(--article);
+  /* grid-column: 2/3; */
 }
 
 .sidebar {
   background-color: var(--sidebar);
+  /* grid-column: 1/2; */
 }
 
 article {
