@@ -86,13 +86,11 @@ img[src$="svg"] {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  /* grid-template-rows: ; */
-
   gap: 1rem;
+  grid-template-areas: repeat(6, 1fr);
 }
 .main {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
 }
 .header,
 .sec-header {
@@ -104,10 +102,13 @@ img[src$="svg"] {
 main {
   background-color: var(--article);
   grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
 }
 
 .sidebar {
   background-color: var(--sidebar);
+  grid-row: 1/6;
 }
 
 article {
