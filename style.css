@@ -86,11 +86,17 @@ img[src$="svg"] {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-areas: repeat(6, 1fr);
 }
 .main {
   display: grid;
+  grid-row: 2/7;
+}
+main .card {
+  background-color: azure;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 .header,
 .sec-header {
@@ -103,19 +109,51 @@ main {
   background-color: var(--article);
   grid-column: 2/3;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-row: 2/6;
+  padding: 2rem;
 }
-
+.card .svg {
+  display: flex;
+  justify-content: end;
+}
 .sidebar {
   background-color: var(--sidebar);
   grid-row: 1/6;
 }
 
-article {
-  background-color: antiquewhite;
+.announce {
+  background-color: rgb(143, 209, 226);
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-column: 3/4;
+  grid-row: 2/5;
+}
+
+div.announcement {
+  background-color: azure;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .trend {
   background-color: beige;
   grid-column: 3/4;
+  grid-row: 5/6;
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+}
+
+.trend .card {
+  background-color: azure;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.trend .card div {
+  display: flex;
+  gap: 1rem;
 }
