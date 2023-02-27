@@ -1,5 +1,8 @@
 * {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 img[src$="svg"] {
@@ -52,7 +55,10 @@ main .card {
   border-radius: 1rem;
   border: none;
 }
-
+ul li:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+}
 .search input:focus {
   outline: none;
 }
