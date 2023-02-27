@@ -11,10 +11,10 @@ html {
   min-height: 100vh;
 } */
 :root {
-  --header: #ffde22;
-  --sidebar: #ff7755;
-  --nav: #00ddff;
-  --article: #bccbde;
+  --header: rgb(241, 247, 181);
+  --sidebar: rgb(253, 138, 138);
+  --nav: rgb(168, 209, 209);
+  --article: rgb(158, 161, 212);
 }
 .container {
   height: 100vmin;
@@ -100,6 +100,11 @@ main .card {
 .sidebar {
   background-color: var(--sidebar);
   grid-row: 1/6;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
 }
 
 .announce {
