@@ -6,15 +6,15 @@ img[src$="svg"] {
   width: 2rem;
   height: 2rem;
 }
-/* body,
+body,
 html {
-  min-height: 100vh;
-} */
+  min-height: 100%;
+}
 :root {
   --header: rgb(241, 247, 181);
-  --sidebar: rgb(253, 138, 138);
+  --sidebar: rgb(158, 161, 212);
   --nav: rgb(168, 209, 209);
-  --article: rgb(158, 161, 212);
+  --article: rgb(168, 209, 209);
 }
 .container {
   height: 100vmin;
@@ -44,7 +44,6 @@ main .card {
 }
 .header .search {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
 }
 .search input {
@@ -52,6 +51,10 @@ main .card {
   flex: 1;
   border-radius: 1rem;
   border: none;
+}
+
+.search input:focus {
+  outline: none;
 }
 .sec-header img {
   width: 3rem;
@@ -89,6 +92,8 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-row: 3/6;
   padding: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 main .card {
   height: 14rem;
@@ -108,7 +113,7 @@ main .card {
 }
 
 .announce {
-  background-color: rgb(143, 209, 226);
+  background-color: var(--article);
   padding: 2rem;
   display: grid;
   gap: 1rem;
@@ -123,7 +128,8 @@ div.announcement {
 }
 
 .trend {
-  background-color: beige;
+  background-color: var(--article);
+
   grid-column: 3/4;
   grid-row: 5/6;
   padding: 1rem;
